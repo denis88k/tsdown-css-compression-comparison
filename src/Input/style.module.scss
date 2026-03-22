@@ -1,0 +1,316 @@
+@use '../common.scss';
+
+.input {
+  background-color: #c79c9c;
+}
+
+.kit-input-test {
+  --in-radius: 12px;
+  --in-font-size: 14px;
+  --in-line-height: 20px;
+  --in-padding-y: 10px;
+  --in-padding-x: 12px;
+  --in-border-width: 1px;
+  --in-bg: #ffffff;
+  --in-color: #0f172a;
+  --in-border: #cbd5e1;
+  --in-placeholder: #94a3b8;
+  --in-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --in-transition: 150ms ease;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  border-radius: var(--in-radius);
+  border: var(--in-border-width) solid var(--in-border);
+  background-color: var(--in-bg);
+  color: var(--in-color);
+  font-size: var(--in-font-size);
+  line-height: var(--in-line-height);
+  padding: var(--in-padding-y) var(--in-padding-x);
+  box-shadow: var(--in-shadow);
+  transition: border-color var(--in-transition), box-shadow var(--in-transition),
+    background-color var(--in-transition), color var(--in-transition);
+}
+
+.kit-input-test::placeholder {
+  color: var(--in-placeholder);
+}
+
+.kit-input-test:hover {
+  --in-border: #94a3b8;
+}
+
+.kit-input-test:focus,
+.kit-input-test:focus-visible {
+  --in-border: #1f6fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(31, 111, 255, 0.18), var(--in-shadow);
+}
+
+.kit-input-test:disabled,
+.kit-input-test[readonly] {
+  --in-bg: #f8fafc;
+  --in-color: #64748b;
+  --in-border: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.kit-input-test--sm {
+  --in-radius: 10px;
+  --in-font-size: 13px;
+  --in-line-height: 18px;
+  --in-padding-y: 8px;
+  --in-padding-x: 10px;
+  min-height: 36px;
+}
+
+.kit-input-test--md {
+  --in-radius: 12px;
+  --in-font-size: 14px;
+  --in-line-height: 20px;
+  --in-padding-y: 10px;
+  --in-padding-x: 12px;
+  min-height: 42px;
+}
+
+.kit-input-test--lg {
+  --in-radius: 14px;
+  --in-font-size: 16px;
+  --in-line-height: 24px;
+  --in-padding-y: 12px;
+  --in-padding-x: 14px;
+  min-height: 50px;
+}
+
+.kit-input-test--round {
+  --in-radius: 999px;
+}
+
+.kit-input-test--error {
+  --in-border: #d62f2f;
+  --in-bg: #fff6f6;
+}
+
+.kit-input-test--error:focus,
+.kit-input-test--error:focus-visible {
+  box-shadow: 0 0 0 3px rgba(214, 47, 47, 0.18), var(--in-shadow);
+}
+
+.kit-input-test--success {
+  --in-border: #0d8d58;
+  --in-bg: #f4fff9;
+}
+
+.kit-input-test--success:focus,
+.kit-input-test--success:focus-visible {
+  box-shadow: 0 0 0 3px rgba(13, 141, 88, 0.18), var(--in-shadow);
+}
+
+.kit-input-test--warning {
+  --in-border: #d79a00;
+  --in-bg: #fffdf4;
+}
+
+.kit-input-test--filled {
+  --in-bg: #f8fafc;
+  --in-border: #f8fafc;
+}
+
+.kit-input-test--filled:hover {
+  --in-bg: #f1f5f9;
+  --in-border: #f1f5f9;
+}
+
+.kit-input-test--ghost {
+  --in-bg: transparent;
+  --in-border: transparent;
+  box-shadow: none;
+}
+
+.kit-input-test-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kit-input-test-label {
+  color: #334155;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.kit-input-test-helper {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.kit-input-test-group[data-state='error'] .kit-input-test-helper {
+  color: #d62f2f;
+}
+
+.kit-input-test-group[data-state='success'] .kit-input-test-helper {
+  color: #0d8d58;
+}
+
+.kit-input-test-prefix,
+.kit-input-test-suffix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #64748b;
+}
+
+.kit-input-test-wrap {
+  display: grid;
+  grid-template-columns: 18px 1fr 18px;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--in-radius);
+  border: var(--in-border-width) solid var(--in-border);
+  background-color: var(--in-bg);
+  padding: 0 var(--in-padding-x);
+  box-shadow: var(--in-shadow);
+  transition: border-color var(--in-transition), box-shadow var(--in-transition),
+    background-color var(--in-transition);
+}
+
+.kit-input-test-wrap .kit-input-test {
+  border: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  min-height: 40px;
+}
+
+.kit-input-test-wrap:focus-within {
+  --in-border: #1f6fff;
+  box-shadow: 0 0 0 3px rgba(31, 111, 255, 0.18), var(--in-shadow);
+}
+
+.kit-input-test-wrap[data-state='error'] {
+  --in-border: #d62f2f;
+}
+
+.kit-input-test-wrap[data-state='warning'] {
+  --in-border: #d79a00;
+}
+
+.kit-input-test-wrap[data-state='success'] {
+  --in-border: #0d8d58;
+}
+
+.kit-input-test--w-1 {
+  max-width: 120px;
+}
+
+.kit-input-test--w-2 {
+  max-width: 180px;
+}
+
+.kit-input-test--w-3 {
+  max-width: 240px;
+}
+
+.kit-input-test--w-4 {
+  max-width: 320px;
+}
+
+.kit-input-test--w-5 {
+  max-width: 420px;
+}
+
+.kit-input-test[data-density='compact'] {
+  --in-padding-y: 6px;
+  --in-padding-x: 10px;
+  min-height: 34px;
+}
+
+.kit-input-test[data-density='comfortable'] {
+  --in-padding-y: 10px;
+  --in-padding-x: 12px;
+  min-height: 42px;
+}
+
+.kit-input-test[data-density='spacious'] {
+  --in-padding-y: 14px;
+  --in-padding-x: 16px;
+  min-height: 54px;
+}
+
+.kit-input-test[data-tone='default'] {
+  --in-border: #cbd5e1;
+}
+
+.kit-input-test[data-tone='brand'] {
+  --in-border: #7ea8ff;
+}
+
+.kit-input-test[data-tone='neutral'] {
+  --in-border: #94a3b8;
+}
+
+.kit-input-test[data-tone='critical'] {
+  --in-border: #d62f2f;
+}
+
+.kit-input-test[data-tone='positive'] {
+  --in-border: #0d8d58;
+}
+
+.kit-input-test[data-tone='accent'] {
+  --in-border: #7c3aed;
+}
+
+.kit-input-test-area {
+  --in-line-height: 22px;
+  min-height: 110px;
+  resize: vertical;
+}
+
+.kit-input-test-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.kit-input-test-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 1023px) {
+  .kit-input-test-row {
+    grid-template-columns: 1fr;
+  }
+
+  .kit-input-test--lg {
+    --in-font-size: 15px;
+    --in-line-height: 22px;
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 767px) {
+  .kit-input-test {
+    --in-font-size: 13px;
+  }
+
+  .kit-input-test-wrap {
+    grid-template-columns: 16px 1fr 16px;
+    gap: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .kit-input-test,
+  .kit-input-test-wrap {
+    transition: none;
+  }
+}

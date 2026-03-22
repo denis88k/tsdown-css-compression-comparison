@@ -1,0 +1,366 @@
+@use '../common.scss';
+
+.my-button {
+  background-color: #000;
+}
+
+.kit-button-test {
+  --btn-radius: 12px;
+  --btn-font-size: 14px;
+  --btn-font-weight: 600;
+  --btn-line-height: 20px;
+  --btn-border-width: 1px;
+  --btn-padding-y: 10px;
+  --btn-padding-x: 16px;
+  --btn-transition: 160ms ease-in-out;
+  --btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--btn-radius);
+  border: var(--btn-border-width) solid transparent;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  line-height: var(--btn-line-height);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: middle;
+  box-shadow: var(--btn-shadow);
+  transition:
+    color var(--btn-transition),
+    background-color var(--btn-transition),
+    border-color var(--btn-transition),
+    box-shadow var(--btn-transition),
+    transform var(--btn-transition);
+}
+
+.kit-button-test:focus-visible {
+  outline: 2px solid #2864ff;
+  outline-offset: 2px;
+}
+
+.kit-button-test:disabled,
+.kit-button-test[aria-disabled='true'] {
+  opacity: 0.56;
+  pointer-events: none;
+}
+
+.kit-button-test:hover {
+  transform: translateY(-1px);
+}
+
+.kit-button-test:active {
+  transform: translateY(0);
+}
+
+.kit-button-test__icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+.kit-button-test__text {
+  white-space: nowrap;
+}
+
+.kit-button-test--block {
+  width: 100%;
+}
+
+.kit-button-test--rounded {
+  --btn-radius: 999px;
+}
+
+.kit-button-test--square {
+  --btn-radius: 8px;
+}
+
+.kit-button-test--xs {
+  --btn-font-size: 12px;
+  --btn-line-height: 16px;
+  --btn-padding-y: 6px;
+  --btn-padding-x: 10px;
+}
+
+.kit-button-test--sm {
+  --btn-font-size: 13px;
+  --btn-line-height: 18px;
+  --btn-padding-y: 8px;
+  --btn-padding-x: 12px;
+}
+
+.kit-button-test--md {
+  --btn-font-size: 14px;
+  --btn-line-height: 20px;
+  --btn-padding-y: 10px;
+  --btn-padding-x: 16px;
+}
+
+.kit-button-test--lg {
+  --btn-font-size: 15px;
+  --btn-line-height: 22px;
+  --btn-padding-y: 12px;
+  --btn-padding-x: 20px;
+}
+
+.kit-button-test--xl {
+  --btn-font-size: 16px;
+  --btn-line-height: 24px;
+  --btn-padding-y: 14px;
+  --btn-padding-x: 24px;
+}
+
+.kit-button-test--brand {
+  color: #ffffff;
+  background-color: #1f6fff;
+  border-color: #1f6fff;
+}
+
+.kit-button-test--brand:hover {
+  background-color: #1659cf;
+  border-color: #1659cf;
+}
+
+.kit-button-test--brand:active {
+  background-color: #1249aa;
+  border-color: #1249aa;
+}
+
+.kit-button-test--neutral {
+  color: #0f172a;
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.kit-button-test--neutral:hover {
+  background-color: #eef2f7;
+}
+
+.kit-button-test--neutral:active {
+  background-color: #e2e8f0;
+}
+
+.kit-button-test--danger {
+  color: #ffffff;
+  background-color: #d62f2f;
+  border-color: #d62f2f;
+}
+
+.kit-button-test--danger:hover {
+  background-color: #b82828;
+  border-color: #b82828;
+}
+
+.kit-button-test--danger:active {
+  background-color: #972020;
+  border-color: #972020;
+}
+
+.kit-button-test--success {
+  color: #ffffff;
+  background-color: #0d8d58;
+  border-color: #0d8d58;
+}
+
+.kit-button-test--success:hover {
+  background-color: #0a7548;
+  border-color: #0a7548;
+}
+
+.kit-button-test--success:active {
+  background-color: #075d39;
+  border-color: #075d39;
+}
+
+.kit-button-test--warning {
+  color: #1f2937;
+  background-color: #f4c542;
+  border-color: #f4c542;
+}
+
+.kit-button-test--warning:hover {
+  background-color: #e3b533;
+  border-color: #e3b533;
+}
+
+.kit-button-test--warning:active {
+  background-color: #cf9f20;
+  border-color: #cf9f20;
+}
+
+.kit-button-test--ghost {
+  color: #1f6fff;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.kit-button-test--ghost:hover {
+  background-color: rgba(31, 111, 255, 0.1);
+}
+
+.kit-button-test--ghost:active {
+  background-color: rgba(31, 111, 255, 0.16);
+}
+
+.kit-button-test--outline {
+  color: #1f6fff;
+  background-color: #ffffff;
+  border-color: #1f6fff;
+}
+
+.kit-button-test--outline:hover {
+  background-color: #f3f8ff;
+}
+
+.kit-button-test--outline:active {
+  background-color: #e9f1ff;
+}
+
+.kit-button-test--soft {
+  color: #0f172a;
+  background-color: #edf2ff;
+  border-color: #d6e2ff;
+}
+
+.kit-button-test--soft:hover {
+  background-color: #e1ebff;
+}
+
+.kit-button-test--soft:active {
+  background-color: #d5e3ff;
+}
+
+.kit-button-test--loading {
+  color: transparent;
+  pointer-events: none;
+}
+
+.kit-button-test--loading::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  color: #ffffff;
+  animation: kit-button-test-spin 0.9s linear infinite;
+}
+
+.kit-button-test-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kit-button-test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.kit-button-test-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kit-button-test-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kit-button-test[data-tone='brand'][data-variant='filled'] {
+  color: #ffffff;
+  background-color: #1f6fff;
+  border-color: #1f6fff;
+}
+
+.kit-button-test[data-tone='brand'][data-variant='outline'] {
+  color: #1f6fff;
+  background-color: #ffffff;
+  border-color: #1f6fff;
+}
+
+.kit-button-test[data-tone='neutral'][data-variant='filled'] {
+  color: #0f172a;
+  background-color: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.kit-button-test[data-tone='neutral'][data-variant='outline'] {
+  color: #0f172a;
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.kit-button-test[data-size='xs'][data-wide='true'] {
+  min-width: 88px;
+}
+
+.kit-button-test[data-size='sm'][data-wide='true'] {
+  min-width: 104px;
+}
+
+.kit-button-test[data-size='md'][data-wide='true'] {
+  min-width: 124px;
+}
+
+.kit-button-test[data-size='lg'][data-wide='true'] {
+  min-width: 148px;
+}
+
+.kit-button-test[data-size='xl'][data-wide='true'] {
+  min-width: 172px;
+}
+
+@keyframes kit-button-test-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1023px) {
+  .kit-button-test-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .kit-button-test--xl {
+    --btn-font-size: 15px;
+    --btn-padding-y: 12px;
+    --btn-padding-x: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .kit-button-test-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kit-button-test--block-mobile {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .kit-button-test,
+  .kit-button-test::after {
+    transition: none;
+    animation: none;
+  }
+}
