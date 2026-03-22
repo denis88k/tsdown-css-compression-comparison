@@ -1,29 +1,3 @@
-# react-components-starter
+- when compressing the styles.module.scss file, it removes duplicates.
 
-A starter for creating a React component library.
-
-## Development
-
-- Install dependencies:
-
-```bash
-npm install
-```
-
-- Run the playground:
-
-```bash
-npm run play
-```
-
-- Run the unit tests:
-
-```bash
-npm run test
-```
-
-- Build the library:
-
-```bash
-npm run build
-```
+- and tsdown/css glues style files without removing duplicates.
